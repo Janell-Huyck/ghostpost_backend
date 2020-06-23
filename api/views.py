@@ -7,6 +7,7 @@ from post.models import GhostPost
 
 
 class GhostPostViewSet(ModelViewSet):
+    basename = 'posts'
     serializer_class = GhostPostSerializer
     queryset = GhostPost.objects.all()
 
@@ -24,10 +25,12 @@ class GhostPostViewSet(ModelViewSet):
 
 
 class BoastViewSet(ModelViewSet):
+    basename = 'boasts'
     serializer_class = BoastSerializer
     queryset = GhostPost.objects.filter(is_boast=True)
 
 
 class RoastViewSet(ModelViewSet):
+    basename = 'roasts'
     serializer_class = RoastSerializer
     queryset = GhostPost.objects.filter(is_boast=False)

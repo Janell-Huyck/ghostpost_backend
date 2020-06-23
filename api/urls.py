@@ -6,9 +6,9 @@ from rest_framework import routers
 
 router = routers.DefaultRouter()
 
-router.register(r'roasts', RoastViewSet)
-router.register(r'boasts', BoastViewSet)
-router.register(r'ghostpost', GhostPostViewSet)
+router.register(r'roasts', RoastViewSet, basename='roasts')
+router.register(r'boasts', BoastViewSet, basename='boasts')
+router.register(r'ghostpost', GhostPostViewSet, basename='posts')
 
 urlpatterns = [
     url(r'^api/', include(router.urls))

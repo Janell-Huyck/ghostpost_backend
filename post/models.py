@@ -1,6 +1,6 @@
 from django.db import models
-from django.utils import timezone
-from datetime import datetime
+# from django.utils import timezone
+# from datetime import datetime
 
 
 class GhostPost(models.Model):
