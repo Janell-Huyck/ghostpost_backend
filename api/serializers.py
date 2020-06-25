@@ -16,33 +16,3 @@ class GhostPostSerializer(HyperlinkedModelSerializer):
             'submission_time',
             'score',
         )
-
-
-class RoastSerializer(HyperlinkedModelSerializer):
-    class Meta:
-        model = GhostPost
-        basename = 'roasts'
-        fields = (
-            'id',
-            'is_boast',
-            'text',
-            'up_votes',
-            'down_votes',
-            'submission_time',
-            'score',
-        )
-
-
-class BoastSerializer(HyperlinkedModelSerializer):
-    class Meta:
-        model = GhostPost
-        basename = 'boasts'
-        fields = (
-            'id',
-            'is_boast',
-            'text',
-            'up_votes',
-            'down_votes',
-            'submission_time',
-            'score',
-        )

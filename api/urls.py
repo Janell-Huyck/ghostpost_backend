@@ -1,13 +1,11 @@
 from django.conf.urls import include, url
-# from django.urls import path
+from rest_framework import routers
+
 
 from api.views import (GhostPostViewSet,
                        BoastViewSet,
                        RoastViewSet,)
 
-#    GhostPostCreateView)
-
-from rest_framework import routers
 
 router = routers.DefaultRouter()
 
@@ -17,7 +15,5 @@ router.register(r'ghostpost', GhostPostViewSet, basename='posts')
 
 
 urlpatterns = [
-    # path('create/', GhostPostCreateView.as_view()),
     url(r'^api/', include(router.urls)),
-
 ]
