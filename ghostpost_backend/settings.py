@@ -127,3 +127,4 @@ STATIC_URL = '/static/'
 CORS_ORIGIN_REGEX_WHITELIST = [
     r'^(http)?s?:\/\/localhost:\d\d\d\d',
 ]
+CSRF_TRUSTED_ORIGINS = ['localhost:3000']
